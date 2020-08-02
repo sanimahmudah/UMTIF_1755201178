@@ -22,3 +22,7 @@ Route::get('foo', function () {
 });
 
 Route::get('mhs','mahasiswaController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
