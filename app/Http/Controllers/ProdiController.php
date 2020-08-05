@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Dosen;
+use App\Prodi;
 use Illuminate\Http\Request;
 
-class DosenController extends Controller
+class ProdiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class DosenController extends Controller
      */
     public function index()
     {
-        //
+        $list_prodi = Prodi::all();
+        return view('prodi.index', compact('list_prodi'));
     }
 
     /**
@@ -41,10 +42,10 @@ class DosenController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Dosen  $dosen
+     * @param  \App\Prodi  $prodi
      * @return \Illuminate\Http\Response
      */
-    public function show(Dosen $dosen)
+    public function show(Prodi $prodi)
     {
         //
     }
@@ -52,10 +53,10 @@ class DosenController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Dosen  $dosen
+     * @param  \App\Prodi  $prodi
      * @return \Illuminate\Http\Response
      */
-    public function edit(Dosen $dosen)
+    public function edit(Prodi $prodi)
     {
         //
     }
@@ -64,10 +65,10 @@ class DosenController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Dosen  $dosen
+     * @param  \App\Prodi  $prodi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Dosen $dosen)
+    public function update(Request $request, Prodi $prodi)
     {
         //
     }
@@ -75,10 +76,10 @@ class DosenController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Dosen  $dosen
+     * @param  \App\Prodi  $prodi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Dosen $dosen)
+    public function destroy(Prodi $prodi)
     {
         //
     }
